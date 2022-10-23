@@ -10,7 +10,9 @@ function handleSubmit(e) {
   })
     .then((response) => {
       console.log('Form Successfully submitted');
-      window.location.href = response.url;
+      setTimeout(() => {
+        window.location.href = response.url;
+      }, 3000);
     })
     .catch((error) => console.log(error));
 }
