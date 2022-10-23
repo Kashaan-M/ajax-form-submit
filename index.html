@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Form Submit</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+      }
+      h1 {
+        margin: 5rem 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 2rem;
+      }
+      input {
+        width: 100%;
+        display: block;
+        padding: 5px 8px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>AJAX Form Submission using fetch API, formData API</h1>
+      <form name="myForm" method="POST" data-netlify="true">
+        <label for="name"
+          >Your Name: <input type="text" name="userName" id="name" required />
+        </label>
+        <label for="email"
+          >Your email:
+          <input type="email" name="userEmail" id="email" required />
+        </label>
+        <input type="Submit" value="Send" />
+      </form>
+    </div>
+  </body>
+</html>
