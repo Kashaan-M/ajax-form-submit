@@ -2,6 +2,8 @@ function handleSubmit(e) {
   e.preventDefault();
   const myForm = e.target;
   const formData = new FormData(myForm);
+  const values = [...formData.entries()];
+  console.log('formData', values);
 
   fetch('/success.html', {
     method: 'POST',
