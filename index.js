@@ -6,6 +6,7 @@ function handleSubmit(e) {
   fetch(e.target.action, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    redirect: 'follow',
     body: new URLSearchParams(formData).toString(),
   })
     .then(() => console.log('Form Successfully submitted'))
