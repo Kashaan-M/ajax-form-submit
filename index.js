@@ -6,10 +6,14 @@ function handleSubmit(e) {
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    redirect: 'follow',
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log('Form Successfully submitted'))
+    .then((response) => {
+      console.log('Form Successfully submitted');
+      if (response.redirected) {
+        window.location.href = response.url;
+      }
+    })
     .catch((error) => console.log(error));
 }
 
